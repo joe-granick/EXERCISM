@@ -10,7 +10,7 @@ char *to_rna(const char* dna){
   }
 
   int i = 0;
-  char* rna = malloc(sizeof(char));
+  char* rna = malloc(l*sizeof(char));
   while(*(dna+i)) {
     switch (*(dna+i)) {
       case 'G':
