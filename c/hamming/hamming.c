@@ -1,17 +1,26 @@
 #include "hamming.h"
 
-int compute(char* s1, char* s2) {
+int compute(const char *s1, const char *s2) {
   int err=0;
-  int l1; int l2;
-
-  while(*(s1++)){l1++;}
-  while(*(s2++)){l2++;}
-  if (l1 != l2){return ERROR_VALUE;}
-
-  int i=0;
-  while (*(s1++)) {
-    if (*(s1+i) != *(s2+i)){err++;}
+  int l1=0; 
+  int l2=0;
+  int i =0;
+  while(*(s1+i)) {
+    l1++;
     i++;
+  }
+  i=0;
+
+  while(*(s2+i)) {
+    l2++;
+    i++;}
+  if (l1 != l2){return -1;}
+
+  int j=0;
+  while (*(s1+j)) {
+    if (*(s1+j) != *(s2+j))
+    {err++;}
+    j++;
   }
   return err;
 }
