@@ -18,8 +18,8 @@ char *to_rna(const char* dna){
         *(rna+i) = 'G';
         break;
 
-      case 'T':
-        *(rna+i) = 'A';
+      case 'A':
+        *(rna+i) = 'U';
         break;
       default :
         break;
