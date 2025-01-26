@@ -5,15 +5,15 @@
 
 void convert(char result[], int drops) {
   if (!(drops%3)) {
-      sprintf(result, "%s", "Pling");
+    strcat(result, "Pling");
   }
 
   if(!(drops%5)) {
-    sprintf(result, "%s", "Plang");
+    strcat(result, "Plang");
   }
 
   if(!(drops%7)) {
-    sprintf(result, "%s", "Plong");
+    strcat(result, "Plong");
   }
 
   if((drops%3) && (drops%5) && (drops%7)) {
