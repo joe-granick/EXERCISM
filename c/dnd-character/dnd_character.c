@@ -17,7 +17,7 @@ int ability(void) {
 }
 
 int modifier(int score) {
-  return floor((double)((score-10.0)/2.0));
+  return floor((score-10)/2.0);
 
 }
 
@@ -29,7 +29,7 @@ dnd_character_t make_dnd_character(void) {
   dndC.intelligence = ability();
   dndC.wisdom = ability();
   dndC.charisma = ability();
-  dndC.hitpoints = modifier(dndC.constitution);
+  dndC.hitpoints = (modifier(dndC.constitution)+10);
 
   return dndC;
 
