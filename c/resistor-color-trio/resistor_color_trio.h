@@ -5,8 +5,6 @@ typedef enum {BLACK, BROWN, RED, ORANGE, YELLOW, GREEN, BLUE, VIOLET, GREY, WHIT
 
 typedef enum {
     OHMS = 0,
-    DECA = 1,
-    HECTO = 2,
     KILOOHMS = 3,
     MEGAOHMS = 6,
     GIGAOHMS = 9

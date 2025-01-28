@@ -7,9 +7,13 @@ resistor_value_t color_code(resistor_band_t colors[]){
   sum += (colors[0]*10);
   sum+=(colors[1]);
   sum *= pow(10, colors[2]);
+  if (colors[2] >=3)
+  {r.value = sum/pow(10, colors[2]);
+  r.unit = (ohms_unit)colors[2];}
+  else{  
   r.value = sum;
-  r.unit = (ohms_unit)colors[2];
-  
+  r.unit = 0;
+  }
   return r;
 
 
