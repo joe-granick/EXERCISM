@@ -46,8 +46,8 @@ void robot_move(robot_status_t *robot, const char *commands)
       else {dir = DIRECTION_WEST;}
     }
 
-    else{
-      if (dir == DIRECTION_WEST)
+    else if(commands[i] == 'R'){
+      if (dir < DIRECTION_WEST)
         {dir +=1;}
       else{dir = DIRECTION_NORTH;}
     }
