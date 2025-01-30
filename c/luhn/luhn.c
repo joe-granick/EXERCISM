@@ -1,20 +1,21 @@
 #include "luhn.h"
 #include <string.h>
+#include <ctype.h>
 bool luhn(const char *num)
 {
   int l = 0;
   int i = 0;
   int sum = 0;
-  while (*(num+i) != NULL)
+  while (*(num+i) != '\0')
   {
-    if(*(num+i) != " "){l++;}
+    if(isspace(*(num+i))){l++;}
     i++;
   }
 
   i=0;
  
 
-  while (*(num+i) != NULL)
+  while (*(num+i) != '\0')
   {
 
     if (*(num+i))
@@ -27,7 +28,7 @@ bool luhn(const char *num)
         sum+=dbl;
       };
     
-      if (!l%2){sum+=*(num+i)};
+      if (!l%2){sum+=*(num+i);}
 
       l++;
     }
