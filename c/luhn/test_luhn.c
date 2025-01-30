@@ -22,13 +22,11 @@ static void test_a_single_zero_is_invalid(void)
 
 static void test_a_simple_valid_SIN_that_remains_valid_if_reversed(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_TRUE(luhn("059"));
 }
 
 static void test_a_simple_valid_SIN_that_becomes_invalid_if_reversed(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_TRUE(luhn("59"));
 }
 
@@ -89,7 +87,6 @@ static void test_valid_strings_with_punctuation_included_become_invalid(void)
 
 static void test_valid_strings_with_symbols_included_become_invalid(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_FALSE(luhn("055£ 444$ 285"));
 }
 
@@ -125,13 +122,11 @@ static void test_number_with_odd_number_of_digits_and_non_zero_first_digit(void)
 
 static void test_ascii_value_for_non_doubled_non_digit_isnt_allowed(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_FALSE(luhn("055b 444 285"));
 }
 
 static void test_ascii_value_for_doubled_non_digit_isnt_allowed(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_FALSE(luhn(":9"));
 }
 
