@@ -67,5 +67,8 @@ double c_imag(complex_t x)
 complex_t c_exp(complex_t x)
 {
    // TODO: implement
+    double e = exp(x.real);
+    x.real=e*cos(x.imag);  
+    x.imag=e*sin(x.imag);
     return x;
 }
