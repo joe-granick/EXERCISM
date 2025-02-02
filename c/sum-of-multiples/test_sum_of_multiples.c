@@ -19,28 +19,24 @@ static void test_no_multiples_within_limit(void)
 
 static void test_one_factor_has_multiples_within_limit(void)
 {
-   TEST_IGNORE();   // delete this line to run test
    const unsigned int multiples[] = { 3, 5 };
    TEST_ASSERT_EQUAL(3, sum(multiples, NUM_OF_ELEMENTS(multiples), 4));
 }
 
 static void test_more_than_one_multiple_within_limit(void)
 {
-   TEST_IGNORE();
    const unsigned int multiples[] = { 3 };
    TEST_ASSERT_EQUAL(9, sum(multiples, NUM_OF_ELEMENTS(multiples), 7));
 }
 
 static void test_more_than_one_factor_with_multiples_within_limit(void)
 {
-   TEST_IGNORE();
    const unsigned int multiples[] = { 3, 5 };
    TEST_ASSERT_EQUAL(23, sum(multiples, NUM_OF_ELEMENTS(multiples), 10));
 }
 
 static void test_each_multiple_is_only_counted_once(void)
 {
-   TEST_IGNORE();
    const unsigned int multiples[] = { 3, 5 };
    TEST_ASSERT_EQUAL(2318, sum(multiples, NUM_OF_ELEMENTS(multiples), 100));
 }
