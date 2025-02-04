@@ -8,11 +8,10 @@
 
  mark[0]=1;
  mark[1]=1;
- mark[2]=0;
-  while(i*i < limit){
+  while(i*i <= limit){
     if(mark[i]==1){i++;continue;}
-    f=i;
-    while (i*f <= limit){mark[i*f] = 1;f++;}
+    f=i*i;
+    while (f <= limit){mark[f] = 1;f+=i;}
     i++;}
 
   uint32_t count = 0;  
