@@ -140,10 +140,9 @@ static void test_hour_and_minutes_roll_over_to_exactly_midnight(void)
 
    test_create(expected, hour, minute);
 }
-/*
+
 static void test_negative_hour(void)
 {
-   TEST_IGNORE();
    int hour = -1, minute = 15;
    clock_t expected = { "23:15" };
 
@@ -152,7 +151,7 @@ static void test_negative_hour(void)
 
 static void test_negative_hour_rolls_over(void)
 {
-   TEST_IGNORE();
+   
    int hour = -25, minute = 0;
    clock_t expected = { "23:00" };
 
@@ -161,7 +160,6 @@ static void test_negative_hour_rolls_over(void)
 
 static void test_negative_hour_rolls_over_continuously(void)
 {
-   TEST_IGNORE();
    int hour = -91, minute = 0;
    clock_t expected = { "05:00" };
 
@@ -170,7 +168,6 @@ static void test_negative_hour_rolls_over_continuously(void)
 
 static void test_negative_minutes(void)
 {
-   TEST_IGNORE();
    int hour = 1, minute = -40;
    clock_t expected = { "00:20" };
 
@@ -179,7 +176,6 @@ static void test_negative_minutes(void)
 
 static void test_negative_minutes_roll_over(void)
 {
-   TEST_IGNORE();
    int hour = 1, minute = -160;
    clock_t expected = { "22:20" };
 
@@ -188,7 +184,6 @@ static void test_negative_minutes_roll_over(void)
 
 static void test_negative_minutes_roll_over_continuously(void)
 {
-   TEST_IGNORE();
    int hour = 1, minute = -4820;
    clock_t expected = { "16:40" };
 
@@ -197,7 +192,6 @@ static void test_negative_minutes_roll_over_continuously(void)
 
 static void test_negative_sixty_minutes_is_previous_hour(void)
 {
-   TEST_IGNORE();
    int hour = 2, minute = -60;
    clock_t expected = { "01:00" };
 
@@ -206,7 +200,6 @@ static void test_negative_sixty_minutes_is_previous_hour(void)
 
 static void test_negative_hour_and_minutes_both_roll_over(void)
 {
-   TEST_IGNORE();
    int hour = -25, minute = -160;
    clock_t expected = { "20:20" };
 
@@ -215,13 +208,12 @@ static void test_negative_hour_and_minutes_both_roll_over(void)
 
 static void test_negative_hour_and_minutes_both_roll_over_continuously(void)
 {
-   TEST_IGNORE();
    int hour = -121, minute = -5810;
    clock_t expected = { "22:10" };
 
    test_create(expected, hour, minute);
 }
-
+/*
 static void test_add_minutes(void)
 {
    TEST_IGNORE();
@@ -543,7 +535,7 @@ int main(void)
    RUN_TEST(test_hour_and_minutes_roll_over);
    RUN_TEST(test_hour_and_minutes_roll_over_continuously);
    RUN_TEST(test_hour_and_minutes_roll_over_to_exactly_midnight);
-   /*RUN_TEST(test_negative_hour);
+   RUN_TEST(test_negative_hour);
    RUN_TEST(test_negative_hour_rolls_over);
    RUN_TEST(test_negative_hour_rolls_over_continuously);
    RUN_TEST(test_negative_minutes);
@@ -552,7 +544,7 @@ int main(void)
    RUN_TEST(test_negative_sixty_minutes_is_previous_hour);
    RUN_TEST(test_negative_hour_and_minutes_both_roll_over);
    RUN_TEST(test_negative_hour_and_minutes_both_roll_over_continuously);
-   RUN_TEST(test_add_minutes);
+   /*RUN_TEST(test_add_minutes);
    RUN_TEST(test_add_no_minutes);
    RUN_TEST(test_add_to_next_hour);
    RUN_TEST(test_add_more_than_one_hour);
