@@ -1,33 +1,29 @@
 #include "sieve.h"
 #include <stdbool.h>
-uint32_t sieve(uint32_t limit, uint32_t *primes, size_t max_primes){
-  bool mark[max_primes];
+#include <stdlib.h>
+  uint32_t sieve(uint32_t limit, uint32_t *primes, size_t max_primes){
+  uint32_t *mark = calloc(limit + 1, sizeof(uint32_t));
   uint32_t i = 2;
-  size_t f = 2;
+  uint32_t f;
 
-  for(size_t k = 0; k < max_primes; k++){
-    mark[k] = 0;
-  }
-  
-  while (i*f < limit){
-    if(mark[i])
+ mark[0]=1;
+ mark[1]=1;
+ mark[2]=0;
+  while(i*i < limit){
+    if(mark[i]==1){i++;continue;}
+    f=i;
+    while (i*f <= limit){mark[i*f] = 1;f++;}
+    i++;}
+
+  uint32_t count = 0;  
+  for(uint32_t j = 2; j <= limit && count < max_primes; j++)
     {
-      i++;
-      f=i;
-    }
-    else{
-      mark[i*f] = 1;
-    }
-  }
-    uint32_t count = 0;
-    for(uint32_t j = 2; j <= limit; j++)
-    {
-      if(!mark[j])
+      if(mark[j]==0)
       {
-        primes[j-2] = j;
+        primes[count] = j;
         count++;
       }
     }
-  
+  free(mark);
   return count;
 }
