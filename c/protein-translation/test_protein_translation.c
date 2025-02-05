@@ -45,7 +45,6 @@ static void test_methionine_rna_sequence(void)
 
 static void test_phenylalanine_rna_sequence_1(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 1,
@@ -57,7 +56,6 @@ static void test_phenylalanine_rna_sequence_1(void)
 
 static void test_phenylalanine_rna_sequence_2(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 1,
@@ -69,7 +67,6 @@ static void test_phenylalanine_rna_sequence_2(void)
 
 static void test_leucine_rna_sequence_1(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 1,
@@ -81,7 +78,6 @@ static void test_leucine_rna_sequence_1(void)
 
 static void test_leucine_rna_sequence_2(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 1,
@@ -93,7 +89,6 @@ static void test_leucine_rna_sequence_2(void)
 
 static void test_serine_rna_sequence_1(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 1,
@@ -105,7 +100,6 @@ static void test_serine_rna_sequence_1(void)
 
 static void test_serine_rna_sequence_2(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 1,
@@ -117,7 +111,6 @@ static void test_serine_rna_sequence_2(void)
 
 static void test_serine_rna_sequence_3(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 1,
@@ -129,7 +122,6 @@ static void test_serine_rna_sequence_3(void)
 
 static void test_serine_rna_sequence_4(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 1,
@@ -141,7 +133,6 @@ static void test_serine_rna_sequence_4(void)
 
 static void test_tyrosine_rna_sequence_1(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 1,
@@ -153,7 +144,6 @@ static void test_tyrosine_rna_sequence_1(void)
 
 static void test_tyrosine_rna_sequence_2(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 1,
@@ -165,7 +155,6 @@ static void test_tyrosine_rna_sequence_2(void)
 
 static void test_cysteine_rna_sequence_1(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 1,
@@ -177,7 +166,6 @@ static void test_cysteine_rna_sequence_1(void)
 
 static void test_cysteine_rna_sequence_2(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 1,
@@ -189,7 +177,6 @@ static void test_cysteine_rna_sequence_2(void)
 
 static void test_tryptophan_rna_sequence(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 1,
@@ -201,7 +188,6 @@ static void test_tryptophan_rna_sequence(void)
 
 static void test_stop_codon_rna_sequence_1(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 0,
@@ -212,7 +198,6 @@ static void test_stop_codon_rna_sequence_1(void)
 
 static void test_stop_codon_rna_sequence_2(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 0,
@@ -223,7 +208,6 @@ static void test_stop_codon_rna_sequence_2(void)
 
 static void test_stop_codon_rna_sequence_3(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 0,
@@ -234,7 +218,6 @@ static void test_stop_codon_rna_sequence_3(void)
 
 static void test_sequence_of_two_protein_codons_translates_into_proteins(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 2,
@@ -247,7 +230,6 @@ static void test_sequence_of_two_protein_codons_translates_into_proteins(void)
 static void
 test_sequence_of_two_different_protein_codons_translates_into_proteins(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 2,
@@ -259,7 +241,6 @@ test_sequence_of_two_different_protein_codons_translates_into_proteins(void)
 
 static void test_translate_rna_strand_into_correct_protein_list(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 3,
@@ -271,7 +252,6 @@ static void test_translate_rna_strand_into_correct_protein_list(void)
 
 static void test_translation_stops_if_stop_codon_at_beginning_of_sequence(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 0,
@@ -283,7 +263,6 @@ static void test_translation_stops_if_stop_codon_at_beginning_of_sequence(void)
 static void
 test_translation_stops_if_stop_codon_at_end_of_two_codon_sequence(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 1,
@@ -296,7 +275,6 @@ test_translation_stops_if_stop_codon_at_end_of_two_codon_sequence(void)
 static void
 test_translation_stops_if_stop_codon_at_end_of_three_codon_sequence(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 2,
@@ -309,7 +287,6 @@ test_translation_stops_if_stop_codon_at_end_of_three_codon_sequence(void)
 static void
 test_translation_stops_if_stop_codon_in_middle_of_three_codon_sequence(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 1,
@@ -322,7 +299,6 @@ test_translation_stops_if_stop_codon_in_middle_of_three_codon_sequence(void)
 static void
 test_translation_stops_if_stop_codon_in_middle_of_six_codon_sequence(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 3,
@@ -335,7 +311,6 @@ test_translation_stops_if_stop_codon_in_middle_of_six_codon_sequence(void)
 static void
 test_sequence_of_two_non_stop_codons_does_not_translate_to_a_stop_codon(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 2,
@@ -347,7 +322,6 @@ test_sequence_of_two_non_stop_codons_does_not_translate_to_a_stop_codon(void)
 
 static void test_non_existing_codon_cant_translate(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = false,
    };
@@ -357,7 +331,6 @@ static void test_non_existing_codon_cant_translate(void)
 
 static void test_unknown_amino_acids_not_part_of_a_codon_cant_translate(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = false,
    };
@@ -367,7 +340,6 @@ static void test_unknown_amino_acids_not_part_of_a_codon_cant_translate(void)
 
 static void test_invalid_codon_cant_translate(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = false,
    };
@@ -378,7 +350,6 @@ static void test_invalid_codon_cant_translate(void)
 static void
 test_incomplete_rna_sequence_can_translate_if_valid_until_a_stop_codon(void)
 {
-   TEST_IGNORE();
    proteins_t expected = {
       .valid = true,
       .count = 2,
