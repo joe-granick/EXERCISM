@@ -8,7 +8,7 @@
 
 int square_root(int n){
   
-  int root = newton_raphson(n);
+  int root = integer_root(n);
   return root;
 }
 
@@ -16,17 +16,27 @@ int square_root(int n){
  * by incrementally taking dividing by the
  * function derivative until value converges
  * on the root*/
-int newton_raphson(int n){
-    double x0;
+/*int newton_root(int n){
     double x = (double)n;
     double fx = x*x;
     double dx = 2*x;
-    while(x -(fx/dx)){
-    x0 = x;
+    while((int)(x*x)!= n){
+    fx = x*x;
+    dx = 2*x;
     x = x-fx/dx;}
 
-    return (int)x0;
+    return (int)x;
 
 
     
+}
+*/
+
+int integer_root(int n)
+{
+  int x = 1;
+  while(x*x < n){
+  x++;
+  }
+  return x;
 }
