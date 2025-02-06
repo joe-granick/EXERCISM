@@ -16,7 +16,6 @@ static void test_first_prime(void)
 
 static void test_second_prime(void)
 {
-   TEST_IGNORE();   // delete this line to run test
    TEST_ASSERT_EQUAL_UINT32(3, nth(2));
 }
 
@@ -34,7 +33,6 @@ static void test_big_prime(void)
 
 static void test_there_is_no_zeroth_prime(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL_UINT32(0, nth(0));
 }
 
