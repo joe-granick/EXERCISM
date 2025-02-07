@@ -1,11 +1,13 @@
 #include "scrabble_score.h"
+#include <string.h>
+#include <ctype.h>
 
 unsigned int score(const char *word){
 int i = 0;
 int score = 0;
 while(word[i]!='\0')
 {
-  char let = word[i];
+  char let = toupper(word[i]);
   if(let == 'Q' || let == 'Z') score+= 10;
   else if(let == 'J' || let == 'X') score+=8;
   else if(let == 'K') score+=5;

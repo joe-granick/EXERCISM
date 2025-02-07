@@ -22,7 +22,6 @@ static void test_uppercase_letter(void)
 
 static void test_valuable_letter(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL(4, score("f"));
 }
 
@@ -34,7 +33,6 @@ static void test_short_word(void)
 
 static void test_short_valuable_word(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL(12, score("zoo"));
 }
 
@@ -46,19 +44,16 @@ static void test_medium_word(void)
 
 static void test_medium_valuable_word(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL(22, score("quirky"));
 }
 
 static void test_long_mixed_case_word(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL(41, score("OxyphenButazone"));
 }
 
 static void test_english_like_word(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL(8, score("pinata"));
 }
 
@@ -70,7 +65,6 @@ static void test_empty_input(void)
 
 static void test_entire_alphabet_available(void)
 {
-   TEST_IGNORE();
    TEST_ASSERT_EQUAL(87, score("abcdefghijklmnopqrstuvwxyz"));
 }
 
