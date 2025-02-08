@@ -1,15 +1,15 @@
 #include "kindergarten_garden.h"
 #include <stddef.h>
 plants_t plants(const char *diagram, const char *student){
-  size_t inl = (student[0]-'A'); // for use in integer division to find corresponding student index value
+  size_t inl = (student[0]-'A')*2; // for use in integer division to find corresponding student index value
   size_t lin = 0; // input line length
   while(diagram[lin] != '\n'){lin++;}
   plants_t stg;
   //plant_t garden[4];
-  for(size_t i = inl; i < (inl+2); i++)
+  for(size_t i = inl, j =0; i < (inl+2); i++,j++)
   {
-      stg.plants[i] = plant(diagram[i]);
-      stg.plants[i+2] = plant(diagram[lin+i+1]);
+      stg.plants[j] = plant(diagram[i]);
+      stg.plants[j+2] = plant(diagram[lin+i+1]);
   }
   //stg.plants = garden;
   return stg;
