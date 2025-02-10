@@ -18,23 +18,24 @@ spiral_matrix_t* spiral_matrix_create(size_t n){
   for(size_t a = 0; a < n; a++){spiral->matrix[a] = malloc(sizeof(int)*n);}
   }else spiral->matrix = NULL;
 
-  while(k < max_n){
-      while(j < max_j){
-        spiral->matrix[i][j] = k++;
+  while(k <= max_n){
+    
+    while(j < max_j){
+        *(spiral->matrix[i]+j) = k++;
       j++;} max_j--;
     
     while(i < max_i){
-      spiral->matrix[i][j] = k++;
+      *(spiral->matrix[i]+j) = k++;
       i++;
       }max_i--;
     
-    while(i > min_j){
-      spiral->matrix[i][j] = k++;
+    while(j > min_j){
+      *(spiral->matrix[i]+j) = k++;
       j--;}min_j++;
   
     while(i > min_i){
-      spiral->matrix[i][j] = k++;
-      i++;} min_i++;
+      *(spiral->matrix[i]+j) = k++;
+      i--;} min_i++;
     }
     return spiral;
   }
