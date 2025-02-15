@@ -19,5 +19,5 @@ typedef struct {
 
 void init_roster(roster_t* roster);
 void add_student(roster_t* roster, char* name, uint8_t grade);
-roster_t* get_grade(roster_t* roster, uint8_t grade);
+roster_t get_grade(roster_t* roster, uint8_t grade);
 #endif

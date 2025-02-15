@@ -15,12 +15,10 @@ void add_student(roster_t* roster, char* name, uint8_t grade){
   (*roster).count++; 
   
 }
-roster_t* get_grade(roster_t* roster, uint8_t grade){
-  size_t count = 0;
-  for(size_t i = 0; i < roster->count; i++)
-  {if(roster->students[i].grade == grade) count++;}
-  student_t* stu[count];
-  for(size_t i = 0, j = 0; i < count; i++)
-  {if((*roster).students[i].grade == grade) stu[j] = roster->students[i]; j++;}
-  return (roster_t) {count, stu}
+roster_t get_grade(roster_t* roster, uint8_t grade){
+  roster_t grade_roster;
+  init_roster(&grade_roster);
+  for(size_t i = 0; i < (*roster).count; i++)
+  {if(roster->students[i].grade == grade) add_student(&grade_roster,roster->students[i].name, grade);}
+  return grade_roster;
 }
