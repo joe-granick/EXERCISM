@@ -24,3 +24,22 @@ roster_t get_grade(roster_t* roster, uint8_t grade){
   {if(roster->students[i].grade == grade) add_student(&grade_roster,roster->students[i].name, roster->students[i].grade);}
   return grade_roster;
 }
+
+roster_t* mSort(roster_t* roster)
+{
+  
+}
+
+void merge(int *arr, int *l_start, int *l_end int *r_start, int*,)
+{
+
+  int *temp = malloc()
+}
+
+void mergeSort(int* a, size_t l)
+{
+  if(l==1) return;
+  mergesort(left);
+  mergesort(right)
+  merge();
+}
